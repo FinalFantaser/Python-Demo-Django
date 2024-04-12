@@ -1,0 +1,28 @@
+.navbar {
+    padding: 0;
+    margin: 0;
+
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.navbar a:hover{ color: yellow; }

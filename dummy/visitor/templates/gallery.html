@@ -1,0 +1,21 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %}Галерея{%endblock%}
+
+{% block header %}Галерея{%endblock%}
+
+{% load static %}
+
+{% block content %}
+<div class="tm-gallery-section tm-mb-80">
+    <div class="tm-gallery">
+        {% for index in img_indexes %}
+            <div class="tm-gallery-item">
+                <a href="{% static 'img/gallery' %}/{{index}}.jpg">
+                    <img src="{% static 'img/gallery' %}/{{index}}-thumb.jpg" alt="Краб" class="img-fluid" />
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

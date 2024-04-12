@@ -1,0 +1,27 @@
+<section class="tm-contact tm-mb-50 tm-bgcolor-3 tm-border-rounded">
+    <div class="tm-contact-header tm-flex-center">
+        <i class="fas fa-pen fa-3x"></i>
+        <h2>Подать заявку</h2>
+    </div>
+    <div class="tm-contact-info">
+        <address class="tm-mb-30">
+            ул. Суворова, 13, микрорайон Новосиликатный, Барнаул
+        </address>
+        <div class="tm-text-white tm-mb-40">Tel: <a href="tel:73852313914" class="tm-link-white">+7 (3852) 31-39-14</a></div>
+        <div class="tm-flex">
+            <a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="tm-contact-form-container">
+        <form id="contact-form" action="/book" method="POST" class="tm-contact-form">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Имя" required/>
+<!--            <input type="tel" id="form-tel" name="phone" placeholder="Телефон" required/>-->
+            <input type="tel" id="form-tel" name="phone" placeholder="Телефон" pattern="7[0-9]{10}" required/>
+            <button type="submit" class="tm-right tm-btn-submit">Забронировать</button>
+            {{ form }}
+        </form>
+    </div>
+</section>
